@@ -84,6 +84,19 @@ df.last_followed_artist_date = pd.to_datetime(df.last_followed_artist_date, erro
 df.to_csv('dataset.csv')
 
 
+
+c.execute('''
+select user_id, total_pieces_purchased, total_spent, created_at from buyers;
+''')
+
+purch = c.fetchall()
+
+df = pd.DataFrame(purch, columns=['user_id', 'total_pieces_purchased', 'total_spent', 'created_at'])
+df.created_at = pd.to_datetime(df.created_at, errors='coerce').dt.date
+
+df.to_csv('purchases.csv')
+
+
 '''SUPER COOL:
 select user_id, total_pieces_purchased, total_spent, created_at from buyers;
 '''
