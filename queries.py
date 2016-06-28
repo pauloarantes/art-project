@@ -76,6 +76,7 @@ cols = ['id',
 'user_type',
 'os']
 
+# Create a DataFrame from the query and export it to csv
 df = pd.DataFrame(data, columns=cols)
 
 df.last_favorited_artwork_date = pd.to_datetime(df.last_favorited_artwork_date, errors='coerce').dt.date
@@ -83,8 +84,7 @@ df.last_followed_artist_date = pd.to_datetime(df.last_followed_artist_date, erro
 
 df.to_csv('dataset.csv')
 
-
-
+# Queries just purchases information, load it into a DataFrame and export ad csv
 c.execute('''
 select user_id, total_pieces_purchased, total_spent, created_at from buyers;
 ''')
@@ -97,6 +97,6 @@ df.created_at = pd.to_datetime(df.created_at, errors='coerce').dt.date
 df.to_csv('purchases.csv')
 
 
-'''SUPER COOL:
+'''SUPER COOL for later:
 select user_id, total_pieces_purchased, total_spent, created_at from buyers;
 '''
