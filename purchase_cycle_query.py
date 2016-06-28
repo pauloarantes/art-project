@@ -17,3 +17,6 @@ data = c.fetchall()
 df = pd.DataFrame(data, columns=['id', 'pieces', 'spent', 'when'])
 
 df.to_csv('purchase_cycles.csv')
+
+conn.commit()
+conn.close()

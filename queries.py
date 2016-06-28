@@ -52,8 +52,7 @@ FULL OUTER JOIN user_os os
 ON u.id=os.user_id
 
 FULL OUTER JOIN user_type
-ON u.id=user_type.user_id
-
+ON u.id=user_type.user_id;
 '''
 )
 
@@ -96,7 +95,12 @@ df.created_at = pd.to_datetime(df.created_at, errors='coerce').dt.date
 
 df.to_csv('purchases.csv')
 
+# Dropping tables used for assistant queries to make process more computationally efficient:
+c.execute("DROP TABLE user_os;")
+c.execute("DROP TABLE user_city;")
+c.execute("DROP TABLE user_gender;")
+c.execute("DROP TABLE user_type;")
 
-'''SUPER COOL for later:
-select user_id, total_pieces_purchased, total_spent, created_at from buyers;
-'''
+
+conn.commit()
+conn.close()

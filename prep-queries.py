@@ -79,3 +79,6 @@ WITH oss AS(
                 AND oss.max_time=mp.data->'properties'->>'time';
 '''
 )
+
+conn.commit()
+conn.close()
