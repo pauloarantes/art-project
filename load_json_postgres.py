@@ -12,7 +12,11 @@ filename = '/Users/pauloarantes/Drive/galvanize/_capstone/art-project/all.json'
 conn = pg.connect(dbname='test_data', user='pauloarantes', host='/tmp')
 c = conn.cursor()
 
-# Created SQL table
+# Drop tables with old data
+c.execute("DROP TABLE mp_purchases;")
+c.execute("DROP TABLE mp_began_session;")
+
+# Creates SQL table for new data entries
 c.execute('''CREATE TABLE mp_purchases (id INTEGER PRIMARY KEY, data JSONB NOT NULL);''')
 c.execute('''CREATE TABLE mp_began_session (id INTEGER PRIMARY KEY, data JSONB NOT NULL);''')
 
