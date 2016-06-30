@@ -32,7 +32,7 @@ X = merged_df.values
 probs = pd.DataFrame(columns=('id', 'purchase_prob'))
 
 # Predicting probabilities of purchase for each user based on trained model
-for user_id, prob in izip(ids[:20], model.predict_proba(X)):
+for user_id, prob in izip(ids, model.predict_proba(X)):
     probs.loc[user_id] = [user_id, round(prob[1]*100, 4)]
 
 # Sorting probabilities by importance and exporting to csv

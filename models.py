@@ -26,7 +26,7 @@ def preprocess(dropcols=['last_sign_in_at'] ,today='2016-06-20'):
     df = pd.read_csv('dataset.csv', usecols=range(1,17))
 
     # Dropping Vango's team ids
-    vango_ids = [38175, 1, 1326, 587, 736, 45651, 67966, 48516, 84261, 30975]
+    vango_ids = [38175, 1, 1326, 587, 736, 45651, 67966, 48516, 84261, 30975, 4260]
     for _id in vango_ids:
         df = df[df.id != _id]
 

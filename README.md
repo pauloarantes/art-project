@@ -18,10 +18,10 @@ Capstone project for Galvanize
 
 6) Run purchase_cycle_query.py to query from db and export 1 csv (purchase_cycle.csv)
 
-7) 
+7)
 
 
 Next steps:
+*) profit curve
 *) datasetEDA.py -> generate pretty plots, including all purchase cycle analysis
-*) predict script to preprocess new data and predict on it, generating a csv output
 *) Visualization of accesses by lat lon
