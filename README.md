@@ -22,6 +22,4 @@ Capstone project for Galvanize
 
 
 Next steps:
-*) profit curve
-*) datasetEDA.py -> generate pretty plots, including all purchase cycle analysis
-*) Visualization of accesses by lat lon
+*) presentation!!

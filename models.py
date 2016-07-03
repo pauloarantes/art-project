@@ -358,20 +358,22 @@ def fit_random_forest(X, y):
 
 
 if __name__ == '__main__':
-    # # Logistic Regression with Label = purchased
-    # df = load_and_add_purchase_data()
-    # merged_df = preprocess_purchases_and_join_with(df)
-    #
-    # # Defining y label and X matrix
-    # y = merged_df.pop('purchased').values
-    # X = merged_df.values
-    #
-    # fit_logistic_regression(X, y)
+    # Logistic Regression with Label = purchased
+    df = load_and_add_purchase_data()
+    merged_df = preprocess_purchases_and_join_with(df)
+    
+    # Defining y label and X matrix
+    y = merged_df.pop('purchased').values
+    X = merged_df.values
+
+    fit_logistic_regression(X, y)
 
 
     # Random Forests with Label = purchased (with best params after GridSearch)
     df = load_and_add_purchase_data()
+    df = df[~df.index.duplicated(keep='first')]
     merged_df = preprocess_purchases_and_join_with(df)
+    merged_df = merged_df[~merged_df.index.duplicated(keep='first')]
 
     # Scaling features
     merged_df.num_sessions = scale(merged_df.num_sessions)
