@@ -16,6 +16,7 @@ I scoped some challenges to focus on with their leadership team:
 #### Pipeline process:
 
 ![Pipeline](images/Screen Shot 2016-07-10 at 11.07.38 AM.png)
+
 1. Aggregate event based data from Mixpanel (12GB, 96 events tracking 141 different features) with user based data from Postgres Database (3GB, 104 tables).
 2. Data Exploration and Processing
 3. Feature Engineering trying different engagement metrics
@@ -32,6 +33,7 @@ What are purchase habits like? Takes 103 days for first purchase,
 repeats every 108 days, and 90% of users only make one purchase
 How much do they spend? About $250
 How much money can we make? Conservatively, +14.3% revenue
+
 ![GridSearched Random Forest](images/Screen Shot 2016-07-10 at 11.08.18 AM.png)
 ![Who should we target](images/Screen Shot 2016-07-10 at 11.08.04 AM.png)
 
