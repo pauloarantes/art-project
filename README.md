@@ -27,12 +27,13 @@ I scoped some challenges to focus on with their leadership team:
 
 
 #### Findings:
-What’s the best timing? Now.
-Can we predict such an abstract purchase? Yes.
-What are purchase habits like? Takes 103 days for first purchase,
+
+- What’s the best timing? Now.
+- Can we predict such an abstract purchase? Yes.
+- What are purchase habits like? Takes 103 days for first purchase,
 repeats every 108 days, and 90% of users only make one purchase
-How much do they spend? About $250
-How much money can we make? Conservatively, +14.3% revenue
+- How much do they spend? About $250
+- How much money can we make? Conservatively, +14.3% revenue
 
 ![GridSearched Random Forest](images/Screen Shot 2016-07-10 at 11.08.18 AM.png)
 ![Who should we target](images/Screen Shot 2016-07-10 at 11.08.04 AM.png)
