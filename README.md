@@ -1,9 +1,11 @@
 # Predicting art purchase and user targeting for a startup
 #### Capstone project for Galvanize
 
+[See the slides here!](https://github.com/pauloarantes/art-project/blob/master/Presentation/B9-PauloArantes%20v3.pdf)
+
 Vango is an art marketplace where you can get original art from independent artists.
 
-I scoped some challenges to focus on with the leadership:
+I scoped some challenges to focus on with their leadership team:
 
 - What’s the best timing to engage users?
 - Can we predict such an abstract purchase?
@@ -25,8 +27,8 @@ I scoped some challenges to focus on with the leadership:
 What’s the best timing? Now.
 Can we predict such an abstract purchase? Yes.
 What are purchase habits like? Takes 103 days for first purchase,
-repeats every 108 days
-How much do they spend? About $265
+repeats every 108 days, and 90% of users only make one purchase
+How much do they spend? About $250
 How much money can we make? Conservatively, +14.3% revenue
 
 
